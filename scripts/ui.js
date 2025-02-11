@@ -1,14 +1,14 @@
 let palette = [
-  [255, 255, 255], // white
+  // [255, 255, 255], // white
   [0, 0, 0], // black
   [255, 212, 0], // yellow
   [255, 121, 0], // orange
-  [255, 52, 154], // pink
+  [145, 0, 0], // pink
   [178, 0, 255], // purplish
-  [0, 255, 215], // aqua
+  [86, 201, 187], // aqua
   [0, 255, 109], // green-blue
 ]
-let defaultColors = [0, 4, 6]
+let defaultColors = [0, 3, 5];
 let colorsSelected = palette.map((c,i)=>(defaultColors.includes(i)))
 
 function toggleSwatch(evt) {

@@ -50,7 +50,8 @@ class SimpleLines extends Layer {
   }
   render () {
     if(this.start != this.stop) {
-      strokeWeight(this.weight)
+      // strokeWeight(this.weight)
+      strokeWeight(1);
       stroke(this.layerColor)
       noFill()
       push()
@@ -81,8 +82,10 @@ class DottedLines extends Layer {
     // }
   }
   render () {
-    noStroke()
-    fill(this.layerColor)
+    // noStroke()
+    // fill(this.layerColor)
+    noFill();
+    stroke(this.layerColor);
     push()
       if(this.sides === 3) rotate(radians(90))
       for(let i=0; i < this.numShapes; i++) {
@@ -139,14 +142,17 @@ class CenteredShape extends Layer {
     this.renderOption = random(1)
   }
   render () {
-    if(this.renderOption) {
-      fill(red(this.layerColor), green(this.layerColor), blue(this.layerColor), this.alpha)
-      noStroke()
-    } else {
-      strokeWeight(1)
-      stroke(red(this.layerColor), green(this.layerColor), blue(this.layerColor))
-      noFill()
-    }
+    // if(this.renderOption) {
+    //   fill(red(this.layerColor), green(this.layerColor), blue(this.layerColor), this.alpha)
+    //   noStroke()
+    // } else {
+    //   strokeWeight(1)
+    //   stroke(red(this.layerColor), green(this.layerColor), blue(this.layerColor))
+    //   noFill()
+    // }
+    strokeWeight(1)
+    stroke(red(this.layerColor), green(this.layerColor), blue(this.layerColor))
+    noFill()
     push()
     if(this.randomShape < 0.5) {
       ellipse(0, 0, 2 * this.shapeSize)
@@ -182,9 +188,11 @@ class CenteredShape extends Layer {
    }
 
    render () {
-     strokeWeight(this.weight)
+     // strokeWeight(this.weight)
+     strokeWeight(1);
      stroke(this.layerColor)
-     fill(this.fillColor, this.alpha/2)
+     //  fill(this.fillColor, this.alpha/2)
+     stroke(this.fillColor, this.alpha/2)
        for(let i = 0; i < this.numShapes; i++) {
          if(this.randomShape < 0.33) {
            ellipse(0, this.center, this.radius, this.radius)
@@ -227,7 +235,8 @@ class SteppedPolygons extends Layer {
    }
 
    render () {
-     strokeWeight(this.thinStroke)
+     // strokeWeight(this.thinStroke)
+     strokeWeight(1);
      noFill()
      push()
      //if(this.numShapes === 3 || this.numShapes === 6) rotate(radians(45))

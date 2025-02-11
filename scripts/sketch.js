@@ -11,13 +11,14 @@ let crystalSize
 let crystal0, crystal1
 let rectGrid1 = [], rectGrid2 = []
 let triangleGrid1, triangleGrid2
-let triGridSide = 72 // Length of a triangle side when using triangle grid
+const triGridSide = 72 // Length of a triangle side when using triangle grid
 let l
-let n = 5 // Rows and columns when using rectangle grid
-let d = 160 // Horiz/vert distance between shapes when using rectangle grid
+const n = 2 // Rows and columns when using rectangle grid
+const d = 160 // Horiz/vert distance between shapes when using rectangle grid
 let gridType = "rec"
 let layerStatus = [true, true]
-let bgColor = '#1c1c1c'
+// let bgColor = '#1c1c1c';
+let bgColor = '#fff';
 
 function setup() {
   const w = 600
@@ -33,12 +34,12 @@ function setup() {
     }
   }
 
-  let triGridCols = 6   // Number of cols in triangle grid
-  let triGridRows = 7   // Number of rows in triangle grid
+  const triGridCols = 2   // Number of cols in triangle grid
+  const triGridRows = 3   // Number of rows in triangle grid
   triangleGrid1 = getTriangleGrid(w, h, triGridCols, triGridRows, triGridSide, true)
   triangleGrid2 = getTriangleGrid(w, h, triGridCols, triGridRows, triGridSide, false)
 
-  let selDefault = 4
+  const selDefault = 4
   select0.value = selDefault
 
   crystalSize = randomCrystalSize()

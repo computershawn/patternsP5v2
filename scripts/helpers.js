@@ -93,11 +93,11 @@ const layerConstructors = [
     init: (n) => new SimpleLines(n),
     weight: 0.3
   },
-  {
-    name: 'Dotted Lines',
-    init: (n) => new DottedLines(n),
-    weight: 0.3
-  },
+  // {
+  //   name: 'Dotted Lines',
+  //   init: (n) => new DottedLines(n),
+  //   weight: 0.3
+  // },
   {
     name: 'Ring of Shapes',
     init: (n) => new RingOfShapes(n),
